@@ -1,0 +1,21 @@
+Source: flexibee-client
+Build-Depends: debhelper (>= 7.0.50~),po-debconf,debconf,imagemagick-6.q16
+Standards-Version: 3.8.4
+Maintainer: Vítězslav Dvořák <info@vitexsoftware.cz>
+Uploaders: Vitex <vitex@hippy.cz>
+Priority: optional
+Homepage: https://github.com/VitexSoftware/flexibee-client-deb
+
+Package: flexibee-client
+Architecture: all
+Depends: default-jdk|openjdk-11-jre|oracle-java11-jre, lsb-base, locales-all,debconf
+Conflicts: flexibee-server,flexibee, winstrom, winstrom-client
+Replaces: flexibee-server,flexibee, winstrom
+Provides: flexibee
+Recommends: mozilla-browser | www-browser
+Section: contrib/office
+Priority: optional
+Homepage: http://www.flexibee.eu/
+Description: Ekonomický systém ABRA FlexiBee - 
+ Serverová verze Internetového ekonomického systému ABRA FlexiBee.
+

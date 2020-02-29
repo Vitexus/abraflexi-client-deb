@@ -1,0 +1,27 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@
+
+override_dh_auto_clean:
+	dh_auto_clean
+
+override_dh_prepare:
+	dh_prepare
+
+override_dh_install:
+	./fresh.sh
+	rm -r data/etc/apt
+	mkdir -p debian/flexibee-client
+	mv -f data/*	debian/flexibee-client
+	cp -f client/flexibee	debian/flexibee-client/usr/bin
+	cp debian/javax.annotation-api-1.3.2.jar debian/flexibee-client/usr/share/flexibee/lib/javax.annotation-api-1.3.2.jar
+	convert -font helvetica -pointsize 30 -draw "text 190,450 '`cat debian/flexibee-client/usr/share/flexibee/lib/VERSION.txt`'" client/flexibee-splash.png debian/flexibee-client/usr/share/flexibee/flexibee-splash.png
+	dh_install
+
+override_dh_strip_nondeterminism:
+	echo dh_strip_nondeterminism skipped
+
+#override_dh_clean:
+#	debconf-updatepo
+#	dh_clean

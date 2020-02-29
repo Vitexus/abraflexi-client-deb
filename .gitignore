@@ -1,0 +1,15 @@
+debian/flexibee-client
+orig
+nbproject
+debian/debhelper-build-stamp
+debian/flexibee-client.debhelper.log
+debian/flexibee-client.postrm.debhelper
+debian/flexibee-client.substvars
+debian/lastversion
+debian/md5sums
+flexibee_*
+debian/files
+/.vagrant/
+*_all.deb
+/debian/flexibee-client-backup/
+/debian/flexibee-client-backup.substvars
