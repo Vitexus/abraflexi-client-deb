@@ -132,7 +132,7 @@ for i in ${winstromdir}/lib/classworlds*.jar; do
 	CLASSPATH="${i}:${CLASSPATH}"
 done
 
-CLASSPATH="${CLASSPATH}:/usr/share/flexibee/lib/javax.annotation-api-1.3.2.jar"
+CLASSPATH="${CLASSPATH}:/usr/share/flexibee/lib/javax.annotation-api-1.3.2.jar:/usr/share/flexibee/lib/jaxb-api-2.3.0.jar"
 
 _debug "ClassPath is '$CLASSPATH'."
 

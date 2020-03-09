@@ -17,3 +17,9 @@ sudo apt update
 sudo apt install flexibee-client
 ```
 
+Compatibility classes Added:
+---------------------------
+
+ * jaxb-api-2.3.0.jar
+ * javax.annotation-api-1.3.2.jar
+
