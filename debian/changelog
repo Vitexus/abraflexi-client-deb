@@ -1,4 +1,4 @@
-flexibee-client (2020.1.0.8~buster) UNRELEASED; urgency=medium
+flexibee-client (2020.1.0.9) UNRELEASED; urgency=medium
 
   [ CyberVitexus ]
   * Use upstream version number
@@ -6,4 +6,8 @@ flexibee-client (2020.1.0.8~buster) UNRELEASED; urgency=medium
   * Debian 10 Buster build
   * 
 
- -- CyberVitexus <vitex@exiv.jinonice.czf>  Sat, 29 Feb 2020 16:28:01 +0100
+  [ root ]
+  * Build 2020.1.0.9
+  * Build 2020.1.0.9
+
+ -- root <root@exiv.jinonice.czf>  Wed, 18 Mar 2020 01:53:49 +0100

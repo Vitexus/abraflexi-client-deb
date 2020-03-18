@@ -28,4 +28,8 @@ cd data
 tar xzvf ../orig/data.tar.gz
 cd ..
 
+#CHANGES=`git log -n 1 | tail -n+5`
 
+CHANGES="Build ${VERSION}"
+
+dch -b -v $VERSION --package $PACKAGE $CHANGES
