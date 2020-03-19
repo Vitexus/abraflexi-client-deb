@@ -16,11 +16,11 @@ sudo apt update
 sudo apt install flexibee-client
 ```
 
-![Installation](https://raw.githubusercontent.com/Vitexus/flexibee-client-deb/master/installation.png)
+![Installation](https://raw.githubusercontent.com/Vitexus/flexibee-client-deb/buster/installation.png)
 
 Vývojáři uživatelských reportů  mohou povolit aktualizace projektů JasperStudia 
 
-![Configuration](https://raw.githubusercontent.com/Vitexus/flexibee-client-deb/master/configuring.png)
+![Configuration](https://raw.githubusercontent.com/Vitexus/flexibee-client-deb/buster/configuring.png)
 
 Compatibility classes Added:
 ---------------------------
