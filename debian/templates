@@ -1,0 +1,6 @@
+
+Template: flexbee-client/UPDATEJASPER
+Type: boolean
+_Default: false
+_Description: Update all jasperstudio projects ?
+ Update classpaths used by jaspersoft studio for custom reports development

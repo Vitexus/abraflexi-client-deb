@@ -1,14 +1,14 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# This file is distributed under the same license as the flexibee-client package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: flexibee-server-backup\n"
-"Report-Msgid-Bugs-To: flexibee-server-backup@packages.debian.org\n"
-"POT-Creation-Date: 2016-09-26 01:50+0200\n"
+"Project-Id-Version: flexibee-client\n"
+"Report-Msgid-Bugs-To: flexibee-client@packages.debian.org\n"
+"POT-Creation-Date: 2020-03-19 02:03+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,15 +17,21 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#. Type: string
+#. Type: boolean
 #. Default
 #: ../templates:1001
-msgid "FlexiBee Backup directory"
+msgid "false"
 msgstr ""
 
-#. Type: string
+#. Type: boolean
 #. Description
 #: ../templates:1002
-msgid "Path to directory where to stora FlexiBee daily backups"
+msgid "Update all jasperstudio projects ?"
 msgstr ""
 
+#. Type: boolean
+#. Description
+#: ../templates:1002
+msgid ""
+"Update classpaths used by jaspersoft studio for custom reports development"
+msgstr ""

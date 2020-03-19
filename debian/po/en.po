@@ -6,26 +6,38 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: flexibee-server-backup\n"
-"Report-Msgid-Bugs-To: flexibee-server-backup@packages.debian.org\n"
-"POT-Creation-Date: 2017-06-18 00:45+0200\n"
-"PO-Revision-Date: 2017-06-18 00:45+0200\n"
+"Report-Msgid-Bugs-To: flexibee-client@packages.debian.org\n"
+"POT-Creation-Date: 2020-03-19 02:03+0100\n"
+"PO-Revision-Date: 2020-03-19 02:07+0100\n"
+"Last-Translator: Vítězslav Dvořák <info@vitexsoftware.cz>\n"
 "Language-Team: \n"
+"Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.11\n"
-"Last-Translator: Vítězslav Dvořák <info@vitexsoftware.cz>\n"
+"X-Generator: Poedit 2.2.1\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Language: en\n"
 
-#. Type: string
+#. Type: boolean
 #. Default
 #: ../templates:1001
-msgid "FlexiBee Backup directory"
-msgstr "FlexiBee Backup directory"
+msgid "false"
+msgstr "false"
 
-#. Type: string
+#. Type: boolean
 #. Description
 #: ../templates:1002
-msgid "Path to directory where to stora FlexiBee daily backups"
-msgstr "Path to directory where to store FlexiBee daily backups"
+msgid "Update all jasperstudio projects ?"
+msgstr "Update all jasperstudio projects ?"
+
+#. Type: boolean
+#. Description
+#: ../templates:1002
+msgid "Update classpaths used by jaspersoft studio for custom reports development"
+msgstr "Update classpaths used by jaspersoft studio for custom reports development"
+
+#~ msgid "FlexiBee Backup directory"
+#~ msgstr "FlexiBee Backup directory"
+
+#~ msgid "Path to directory where to stora FlexiBee daily backups"
+#~ msgstr "Path to directory where to store FlexiBee daily backups"
