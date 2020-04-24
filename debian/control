@@ -8,7 +8,7 @@ Homepage: https://github.com/VitexSoftware/flexibee-client-deb
 
 Package: flexibee-client
 Architecture: all
-Depends: default-jdk|openjdk-11-jre|oracle-java11-jre, lsb-base, locales-all,debconf
+Depends: default-jdk|openjdk-11-jre|oracle-java11-jre, lsb-base, locales-all,debconf, libslf4j-java
 Conflicts: flexibee-server,flexibee, winstrom, winstrom-client
 Replaces: flexibee-server,flexibee, winstrom
 Provides: flexibee
