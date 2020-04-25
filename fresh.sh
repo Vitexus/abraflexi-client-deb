@@ -10,7 +10,7 @@ VERSION=`echo $LATESTPKG | awk -F_ '{print $2}'`
 
 echo XXXXXXXXXXXXXXXXXXXXXXXXXX Building $VERSION
 
-wget -c $LATESTURL -O orig/${PACKAGE}_${VERSION}_all.deb
+wget -d -v -c $LATESTURL -O orig/${PACKAGE}_${VERSION}_all.deb
 
 
 rm -rf debian/data data
