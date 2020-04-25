@@ -10,6 +10,10 @@ VERSION=`echo $LATESTPKG | awk -F_ '{print $2}'`
 
 echo XXXXXXXXXXXXXXXXXXXXXXXXXX Building $VERSION
 
+curl -v $LATESTURL 
+
+echo wget $LATESTURL 
+
 wget -d -v -c $LATESTURL -O orig/${PACKAGE}_${VERSION}_all.deb
 
 
