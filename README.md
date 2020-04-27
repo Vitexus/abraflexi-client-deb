@@ -28,3 +28,4 @@ Compatibility classes Added:
  * jaxb-api-2.3.0.jar
  * javax.annotation-api-1.3.2.jar
 
+Pokud pracujete s více firmami které se vám pletou zvažte instalaci [temného klienta](https://github.com/VitexSoftware/dark-flexibee-client-deb)
