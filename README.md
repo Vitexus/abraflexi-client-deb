@@ -1,6 +1,6 @@
 # flexibee-client - deb balíček
 
-![FlexiBee client logo](https://raw.githubusercontent.com/Vitexus/flexibee-client-deb/master/flexibee-client.png)
+![FlexiBee client logo](https://raw.githubusercontent.com/Vitexus/flexibee-client-deb/master/flexibee-client.svg)
 
 [EN] Debian Package for client-only deploy of czech accounting system FlexiBee
 
