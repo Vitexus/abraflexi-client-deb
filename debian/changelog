@@ -1,4 +1,4 @@
-flexibee-client (2020.2.0.6) UNRELEASED; urgency=medium
+flexibee-client (2020.2.0.6+1) UNRELEASED; urgency=medium
 
   [ CyberVitexus ]
   * Use upstream version number
@@ -25,5 +25,6 @@ flexibee-client (2020.2.0.6) UNRELEASED; urgency=medium
 
   [ root ]
   * Build 2020.2.0.6
+  * Build 2020.2.0.6+1
 
- -- root <root@exiv.jinonice.czf>  Sat, 16 May 2020 06:35:42 +0200
+ -- root <root@exiv.jinonice.czf>  Sat, 16 May 2020 06:42:21 +0200
