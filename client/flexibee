@@ -144,4 +144,4 @@ cd $HOME
 #    FLEXIBEE_SERVER_ARGS="-c /etc/flexibee/flexibee-server.xml $FLEXIBEE_SERVER_ARGS"
 # fi
 
-${JAVACMD}  --illegal-access=deny  -cp $CLASSPATH -Dwinstromdir=${winstromdir}/lib -splash:${winstromdir}/flexibee-splash.png -Dclassworlds.conf=${winstromdir}/lib/launcher.txt  $FLEXIBEE_JAVA_ARGS org.codehaus.classworlds.Launcher $FLEXIBEE_ARGS $@
+${JAVACMD} --add-opens java.base/java.util=ALL-UNNAMED --add-opens java.base/java.lang.reflect=ALL-UNNAMED --add-opens java.base/java.text=ALL-UNNAMED --add-opens java.desktop/java.awt.font=ALL-UNNAMED  --illegal-access=deny  -cp $CLASSPATH -Dwinstromdir=${winstromdir}/lib -splash:${winstromdir}/flexibee-splash.png -Dclassworlds.conf=${winstromdir}/lib/launcher.txt  $FLEXIBEE_JAVA_ARGS org.codehaus.classworlds.Launcher $FLEXIBEE_ARGS $@
