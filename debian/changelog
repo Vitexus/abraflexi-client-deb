@@ -1,4 +1,4 @@
-flexibee-client (2020.2.1) UNRELEASED; urgency=medium
+flexibee-client (2020.2.1.2) UNRELEASED; urgency=medium
 
   [ CyberVitexus ]
   * Use upstream version number
@@ -31,5 +31,6 @@ flexibee-client (2020.2.1) UNRELEASED; urgency=medium
   * Build 2020.2.1
   * Build 2020.2.1
   * Build 2020.2.1
+  * Build 2020.2.1.2
 
- -- root <root@hosting.vitexsoftware.cz>  Tue, 16 Jun 2020 00:07:28 +0200
+ -- root <root@hosting.vitexsoftware.cz>  Fri, 19 Jun 2020 21:45:35 +0200
