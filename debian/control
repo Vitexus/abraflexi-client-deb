@@ -1,5 +1,5 @@
 Source: flexibee-client
-Build-Depends: debhelper (>= 11),po-debconf,debconf,imagemagick-6.q16,inkscape
+Build-Depends: debhelper (>= 11),po-debconf,debconf,imagemagick-6.q16,inkscape (< 1.0)
 Standards-Version: 3.8.4
 Maintainer: Vítězslav Dvořák <info@vitexsoftware.cz>
 Uploaders: Vitex <vitex@hippy.cz>

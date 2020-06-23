@@ -5,6 +5,5 @@ echo "Updating jasper studio classpaths to use FlexiBee $FBVERSION"
 for f in `grep --exclude-dir=lost+found  --include=.classpath -rw '/home' -e "classpathentry kind=\"lib\" path=\"/usr/share/flexibee/lib/winstrom-*" | awk -F: '{print $1}' | uniq`
 do
     echo updating $f
-    sed -i -r 's/([0-9]{4}\.[0-9]{1,2}\.[0-9]{1,2}\.[0-9]{1,2})/'${FBVERSION}'/g' $f
+    sed -i -r 's/([0-9]{4}\.[0-9]{1,2}\.[0-9]{1,2}\.[0-9]{1,2}|[0-9]{4}\.[0-9]{1,2}\.[0-9]{1,2})/'${FBVERSION}'/g' $f
 done
-
