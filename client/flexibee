@@ -32,18 +32,6 @@ findjava() {
 	# We try hard to find the proper 'java' command
 	if [ -n "${FLEXIBEE_JAVA}" ] && [ -x "${FLEXIBEE_JAVA}" ]
         then
-		JAVACMD="${FLEXIBEE_JAVA}"
-		_debug "Using \$FLEXIBEE_JAVA to find java virtual machine."
-	elif [ -x /usr/lib/jvm/java-8-oracle/jre/bin/java ]
-        then
-		JAVACMD='/usr/lib/jvm/java-8-oracle/jre/bin/java'
-		_debug "Using /usr/lib/jvm/java-8-oracle/jre/bin/java to find java virtual machine."
-	elif [ -x /usr/lib/jvm/java-7-oracle/jre/bin/java ]
-	then
-		JAVACMD="${JAVA_BINDIR}/java"
-		_debug "Using \$JAVA_BINDIR to find java virtual machine."
-	elif [ -n "${JAVA_HOME}" ] && [ -x "${JAVA_HOME}/bin/java" ]
-	then
 		JAVACMD="${JAVA_HOME}/bin/java"
 		_debug "Using \$JAVA_HOME to find java virtual machine."
 	else
