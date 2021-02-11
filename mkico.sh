@@ -9,7 +9,7 @@ for resolution in $resolutions
 do
     echo $resolution
     mkdir -p $DIR/${resolution}x${resolution}/
-    inkscape -z -w ${resolution} -h ${resolution} $SRC -e $DIR/${resolution}x${resolution}/$PACKAGE.png
+    inkscape -z -w ${resolution} -h ${resolution} $SRC -o $DIR/${resolution}x${resolution}/$PACKAGE.png
 done
 mkdir -p $DIR/scalable
 cp $SRC $DIR/scalable/$PACKAGE.svg 
