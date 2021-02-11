@@ -12,13 +12,13 @@ override_dh_prepare:
 override_dh_install:
 	./fresh.sh
 	rm -r data/etc/apt
-	mkdir -p debian/flexibee-client
-	mv -f data/*	debian/flexibee-client
-	cp -f client/flexibee	debian/flexibee-client/usr/bin
-	cp debian/javax.annotation-api-1.3.2.jar debian/flexibee-client/usr/share/flexibee/lib/javax.annotation-api-1.3.2.jar
-	cp debian/jaxb-api-2.3.0.jar debian/flexibee-client/usr/share/flexibee/lib/jaxb-api-2.3.0.jar
+	mkdir -p debian/abraflexi-client
+	mv -f data/*	debian/abraflexi-client
+	cp -f client/abraflexi	debian/abraflexi-client/usr/bin
+	cp debian/javax.annotation-api-1.3.2.jar debian/abraflexi-client/usr/share/abraflexi/lib/javax.annotation-api-1.3.2.jar
+	cp debian/jaxb-api-2.3.0.jar debian/abraflexi-client/usr/share/abraflexi/lib/jaxb-api-2.3.0.jar
 	./mkico.sh
-	convert -font helvetica -pointsize 30 -draw "text 300,420 '`cat debian/flexibee-client/usr/share/flexibee/lib/VERSION.txt`'" debian/flexibee-client/usr/share/icons/hicolor/512x512/flexibee.png debian/flexibee-client/usr/share/flexibee/flexibee-splash.png
+	convert -font helvetica -pointsize 30 -draw "text 300,420 '`cat debian/abraflexi-client/usr/share/abraflexi/lib/VERSION.txt`'" debian/abraflexi-client/usr/share/icons/hicolor/512x512/abraflexi.png debian/abraflexi-client/usr/share/abraflexi/abraflexi-splash.png
 	dh_install
 
 override_dh_strip_nondeterminism:

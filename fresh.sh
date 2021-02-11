@@ -10,29 +10,19 @@ VERSION=`echo $LATESTPKG | awk -F_ '{print $2}'`
 
 echo XXXXXXXXXXXXXXXXXXXXXXXXXX Building $VERSION
 
-curl -v $LATESTURL > orig/${PACKAGE}_${VERSION}_all.deb
+mkdir debian/tmp
 
-#echo wget $LATESTURL 
-#wget -d -v -c $LATESTURL -O orig/${PACKAGE}_${VERSION}_all.deb
+curl -v $LATESTURL > debian/tmp/${PACKAGE}_${VERSION}_all.deb
 
-
-rm -rf debian/data data
-
-mkdir -p orig
-cd orig
-ls -la
+cd debian/tmp
 ar -x ${PACKAGE}_${VERSION}_all.deb
-cd ..
-#cd debian
-#tar xzvf ../orig/control.tar.gz
-#cd ..
-mkdir data
-cd data
-tar xzvf ../orig/data.tar.gz
+tar xzvf control.tar.gz
+tar xzvf data.tar.gz
 cd ..
 
 #CHANGES=`git log -n 1 | tail -n+5`
 
 CHANGES="Build ${VERSION}"
 
+cd ..
 dch -b -v $VERSION --package $PACKAGE $CHANGES

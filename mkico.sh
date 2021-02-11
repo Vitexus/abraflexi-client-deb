@@ -1,5 +1,5 @@
 #!/bin/bash
-PACKAGE="flexibee"
+PACKAGE="abraflexi"
 SRC="$PACKAGE-client.svg"
 DIR="debian/$PACKAGE-client/usr/share/icons/hicolor"
 
