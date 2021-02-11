@@ -1,9 +1,10 @@
-client/updatejasperclasspath          usr/share/abraflexi/bin/
+client/abraflexi			usr/bin
+client/updatejasperclasspath		usr/share/abraflexi/bin/
 
-debian/javax.annotation-api-1.3.2.jar usr/share/abraflexi/lib/
-debian/jaxb-api-2.3.0.jar             usr/share/abraflexi/lib/
+debian/javax.annotation-api-1.3.2.jar	usr/share/abraflexi/lib/
+debian/jaxb-api-2.3.0.jar		usr/share/abraflexi/lib/
 
-client/abraflexi		      usr/bin
+client/abraflexi			usr/bin
 etc/default/abraflexi
 
 usr/share/applications/abraflexi.desktop
