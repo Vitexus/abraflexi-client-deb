@@ -13,3 +13,8 @@ debian/files
 *_all.deb
 /debian/flexibee-client-backup/
 /debian/flexibee-client-backup.substvars
+
+
+/debian/.debhelper/
+/debian/abraflexi-client/
+/debian/tmp/

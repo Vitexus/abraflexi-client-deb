@@ -6,16 +6,16 @@ debian/jaxb-api-2.3.0.jar             usr/share/abraflexi/lib/
 client/abraflexi		      usr/bin
 etc/default/abraflexi
 
-./tmp/usr/share/applications/flexibee.desktop
+usr/share/applications/abraflexi.desktop
 
-tmp/usr/share/doc/flexibee/*	usr/share/doc/abraflexi/
+debian/tmp/usr/share/doc/flexibee/*	usr/share/doc/abraflexi/
 usr/share/flexibee/bin/abraflexi2xml
-tmp/usr/share/flexibee/* tmp/usr/share/abraflexi/
-tmp/usr/share/flexibee/lib/* 		tmp/usr/share/abraflexi/lib/*
-tmp/usr/share/fonts/truetype/* 			usr/share/fonts/truetype
-tmp/usr/share/mime/packages/abraflexi.xml
+debian/tmp/usr/share/flexibee/* debian/tmp/usr/share/abraflexi/
+debian/tmp/usr/share/flexibee/lib/* 		debian/tmp/usr/share/abraflexi/lib/*
+debian/tmp/usr/share/fonts/truetype/* 			usr/share/fonts/truetype
+debian/tmp/usr/share/mime/packages/abraflexi.xml
 
-tmp/usr/share/mimelnk/application/* usr/share/mimelnk/application
+debian/tmp/usr/share/mimelnk/application/* usr/share/mimelnk/application
 
 usr/share/pixmaps/abraflexi.png
 
