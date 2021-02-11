@@ -12,12 +12,12 @@ echo XXXXXXXXXXXXXXXXXXXXXXXXXX Building $VERSION
 
 mkdir debian/tmp
 
-curl -v $LATESTURL > debian/tmp/${PACKAGE}_${VERSION}_all.deb
+curl $LATESTURL > debian/tmp/${PACKAGE}_${VERSION}_all.deb
 
 cd debian/tmp
 ar -x ${PACKAGE}_${VERSION}_all.deb
-tar xzvf control.tar.gz
-tar xzvf data.tar.gz
+tar xzf control.tar.gz
+tar xzf data.tar.gz
 cd ..
 
 #CHANGES=`git log -n 1 | tail -n+5`
