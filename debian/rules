@@ -11,19 +11,19 @@ override_dh_prepare:
 
 override_dh_install:
 	./fresh.sh
-	mv tmp/etc/default/flexibee	tmp/etc/default/abraflexi
-	mv tmp/usr/share/flexibee/bin/flexibee2xml tmp/usr/share/flexibee/bin/abraflexi2xml
-	mv tmp/usr/share/applications/flexibee.desktop tmp/usr/share/applications/abraflexi.desktop
-	mv tmp/usr/share/mime/packages/flexibee.xml	tmp/usr/share/mime/packages/abraflexi.xml
-	mv tmp/usr/share/mimelnk/application/x-flexibee-backup.desktop		tmp/usr/share/mimelnk/application/x-abraflexi-backup.desktop
-	mv tmp/usr/share/mimelnk/application/x-flexibee-connection.desktop	tmp/usr/share/mimelnk/application/x-abraflexi-connection.desktop
-	mv tmp/usr/share/mimelnk/application/x-flexibee-license.desktop		tmp/usr/share/mimelnk/application/x-abraflexi-license.desktop
-	mv tmp/usr/share/mimelnk/application/x-flexibee-query.desktop		tmp/usr/share/mimelnk/application/x-abraflexi-query.desktop
-	mv tmp/usr/share/mimelnk/application/x-flexibee-report.desktop		tmp/usr/share/mimelnk/application/x-abraflexi-report.desktop
-	mv tmp/usr/share/mimelnk/application/x-flexibee-xml.desktop		tmp/usr/share/mimelnk/application/x-abraflexi-xml.desktop
-	sed -i 's/flexibee/abraflexi/g' tmp/usr/share/mimelnk/application/*
-	sed -i 's/flexibee/abraflexi/g' tmp/usr/share/mime/packages/abraflexi.xml
-	mv tmp/usr/share/pixmaps/flexibee.png	tmp/usr/share/pixmaps/abraflexi.png
+	mv debian/tmp/etc/default/flexibee	debian/tmp/etc/default/abraflexi
+	mv debian/tmp/usr/share/flexibee/bin/flexibee2xml debian/tmp/usr/share/flexibee/bin/abraflexi2xml
+	mv debian/tmp/usr/share/applications/flexibee.desktop debian/tmp/usr/share/applications/abraflexi.desktop
+	mv debian/tmp/usr/share/mime/packages/flexibee.xml	debian/tmp/usr/share/mime/packages/abraflexi.xml
+	mv debian/tmp/usr/share/mimelnk/application/x-flexibee-backup.desktop		debian/tmp/usr/share/mimelnk/application/x-abraflexi-backup.desktop
+	mv debian/tmp/usr/share/mimelnk/application/x-flexibee-connection.desktop	debian/tmp/usr/share/mimelnk/application/x-abraflexi-connection.desktop
+	mv debian/tmp/usr/share/mimelnk/application/x-flexibee-license.desktop		debian/tmp/usr/share/mimelnk/application/x-abraflexi-license.desktop
+	mv debian/tmp/usr/share/mimelnk/application/x-flexibee-query.desktop		debian/tmp/usr/share/mimelnk/application/x-abraflexi-query.desktop
+	mv debian/tmp/usr/share/mimelnk/application/x-flexibee-report.desktop		debian/tmp/usr/share/mimelnk/application/x-abraflexi-report.desktop
+	mv debian/tmp/usr/share/mimelnk/application/x-flexibee-xml.desktop		debian/tmp/usr/share/mimelnk/application/x-abraflexi-xml.desktop
+	sed -i 's/flexibee/abraflexi/g' debian/tmp/usr/share/mimelnk/application/*
+	sed -i 's/flexibee/abraflexi/g' debian/tmp/usr/share/mime/packages/abraflexi.xml
+	mv debian/tmp/usr/share/pixmaps/flexibee.png	debian/tmp/usr/share/pixmaps/abraflexi.png
 	dh_install
 	./mkico.sh
 	convert -font helvetica -pointsize 30 -draw "text 300,420 '`cat debian/abraflexi-client/usr/share/abraflexi/lib/VERSION.txt`'" debian/abraflexi-client/usr/share/icons/hicolor/512x512/abraflexi.png debian/abraflexi-client/usr/share/abraflexi/abraflexi-splash.png
