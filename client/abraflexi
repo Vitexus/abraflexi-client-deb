@@ -1,11 +1,11 @@
 #!/bin/sh
 
 # DEBUG=1
-FLEXIBEE_SERVER_ARGS=""
-FLEXIBEE_ARGS=""
-FLEXIBEE_JAVA_ARGS="-Xmx1g -client -XX:-OmitStackTraceInFastThrow -XX:+IgnoreUnrecognizedVMOptions"
-FLEXIBEE_LIB_DIR="/usr/share/abraflexi/lib/"
-FLEXIBEE_CACHE_DIR="$HOME/.winstrom/cache/"
+ABRAFLEXI_SERVER_ARGS=""
+ABRAFLEXI_ARGS=""
+ABRAFLEXI_JAVA_ARGS="-Xmx1g -client -XX:-OmitStackTraceInFastThrow -XX:+IgnoreUnrecognizedVMOptions"
+ABRAFLEXI_LIB_DIR="/usr/share/abraflexi/lib/"
+ABRAFLEXI_CACHE_DIR="$HOME/.winstrom/cache/"
 
 _debug() {
 	if [ -n "${DEBUG}" ]
@@ -30,7 +30,7 @@ _error() {
 
 findjava() {
 	# We try hard to find the proper 'java' command
-	if [ -n "${FLEXIBEE_JAVA}" ] && [ -x "${FLEXIBEE_JAVA}" ]
+	if [ -n "${ABRAFLEXI_JAVA}" ] && [ -x "${ABRAFLEXI_JAVA}" ]
         then
 		JAVACMD="${JAVA_HOME}/bin/java"
 		_debug "Using \$JAVA_HOME to find java virtual machine."
@@ -67,12 +67,12 @@ _source() {
 
 # Fix for Stupid Debian settings in /etc/sysctl.d/bindipv6only.conf
 if [ -f /proc/sys/net/ipv6/bindv6only -a x"`cat /proc/sys/net/ipv6/bindv6only`" = x"1" ]; then 
-    FLEXIBEE_JAVA_ARGS="${FLEXIBEE_JAVA_ARGS} -Djava.net.preferIPv4Stack=true"
+    ABRAFLEXI_JAVA_ARGS="${ABRAFLEXI_JAVA_ARGS} -Djava.net.preferIPv4Stack=true"
     echo "Disabling IPv6 support in FlexiBee due to the System settings"
 fi
 
-if [ -f /etc/default/flexibee ]; then
-	. /etc/default/flexibee
+if [ -f /etc/default/abraflexi ]; then
+	. /etc/default/abraflexi
 fi
 
 findjava
@@ -89,7 +89,7 @@ winstrompath="${winstrompath%/bin}" # nothing happens if winstrom is not install
 
 
 # we try different possibilities to find winstrom jars
-for jar in "${winstrompath}" "${winstrompath}/share/flexibee" "${winstrompath}/flexibee" "${winstrompath}/share/winstrom" "${winstrompath}/winstrom"
+for jar in "${winstrompath}" "${winstrompath}/share/abraflexi" "${winstrompath}/abraflexi" "${winstrompath}/share/winstrom" "${winstrompath}/winstrom"
 do
 	for i in ${jar}/lib/winstrom-*.jar; do
 		if [ -f $i ]; then
@@ -106,7 +106,7 @@ done
 
 if [ -z "${winstromdir}" ]
 then
-	_error "Couldn't find flexibee under '${winstrompath}'."
+	_error "Couldn't find abraflexi under '${winstrompath}'."
 	exit 1
 fi
 
@@ -128,10 +128,10 @@ _debug "ClassPath is '$CLASSPATH'."
 cd $HOME
 
 # Support for server as part of client.
-# if [ x"$FLEXIBEE_CFG" = x"local" ]; then
-#    FLEXIBEE_SERVER_ARGS="-c /etc/abraflexi/flexibee-server.xml $FLEXIBEE_SERVER_ARGS"
+# if [ x"$ABRAFLEXI_CFG" = x"local" ]; then
+#    ABRAFLEXI_SERVER_ARGS="-c /etc/abraflexi/abraflexi-server.xml $ABRAFLEXI_SERVER_ARGS"
 # fi
 
 ${JAVACMD} --add-opens java.base/java.util=ALL-UNNAMED --add-opens java.base/java.lang.reflect=ALL-UNNAMED --add-opens java.base/java.text=ALL-UNNAMED --add-opens java.desktop/java.awt.font=ALL-UNNAMED  \
 --add-opens java.desktop/sun.awt.X11=ALL-UNNAMED  --add-opens java.base/java.lang=ALL-UNNAMED --add-exports java.xml.crypto/org.jcp.xml.dsig.internal.dom=ALL-UNNAMED  \
---illegal-access=deny  -cp $CLASSPATH -Dwinstromdir=${winstromdir}/lib -splash:${winstromdir}/flexibee-splash.png -Dclassworlds.conf=${winstromdir}/lib/launcher.txt  $FLEXIBEE_JAVA_ARGS org.codehaus.classworlds.Launcher $FLEXIBEE_ARGS $@
+--illegal-access=deny  -cp $CLASSPATH -Dwinstromdir=${winstromdir}/lib -splash:${winstromdir}/abraflexi-splash.png -Dclassworlds.conf=${winstromdir}/lib/launcher.txt  $ABRAFLEXI_JAVA_ARGS org.codehaus.classworlds.Launcher $ABRAFLEXI_ARGS $@
