@@ -1,5 +1,5 @@
 #!/bin/sh
-# postinst script for flexibee-client
+# postinst script for abraflexi-client
 #
 
 set -e
@@ -33,7 +33,7 @@ case "$1" in
 	# Check their answer.
 	db_get flexbee-client/UPDATEJASPER
 	if [ "$RET" = "true" ]; then
-		/usr/share/flexibee/bin/updatejasperclasspath 
+		/usr/share/abraflexi/bin/updatejasperclasspath 
 	fi
     ;;
 
