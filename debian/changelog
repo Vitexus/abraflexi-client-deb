@@ -52,4 +52,7 @@ flexibee-client (2021.1.3) UNRELEASED; urgency=medium
   [ CyberVitexus ]
   * Build 2021.1.3
 
- -- CyberVitexus <vitex@exiv.jinonice.czf>  Thu, 11 Feb 2021 15:10:10 +0100
+  [ root ]
+  * Build 2021.1.3
+
+ -- root <root@exiv.jinonice.czf>  Thu, 11 Feb 2021 15:38:12 +0100
