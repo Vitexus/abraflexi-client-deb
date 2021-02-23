@@ -30,13 +30,9 @@ flexibee-client (2020.3.0.11) UNRELEASED; urgency=medium
   * Build 2020.2.1
   * Build 2020.2.1
   * Build 2020.2.1
-  * Build 2020.2.1
-  * Build 2020.2.1.2
   * Build 2020.2.1.2
   * Build 2020.2.2
-  * Build 2020.2.2.1
   * Build 2020.2.2.2
-  * Build 2020.2.3
   * Build 2020.2.3
   * Build 2020.2.3.1
   * Build 2020.2.3.2
@@ -55,5 +51,3 @@ flexibee-client (2020.3.0.11) UNRELEASED; urgency=medium
   * Build 2020.3.0.5
   * Build 2020.3.0.5
   * Build 2020.3.0.11
-
- -- root <root@hosting.vitexsoftware.cz>  Thu, 14 Jan 2021 17:18:51 +0100
