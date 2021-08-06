@@ -1,4 +1,4 @@
-flexibee-client (2020.3.0.11) UNRELEASED; urgency=medium
+flexibee-client (2021.6.3) UNRELEASED; urgency=medium
 
   [ CyberVitexus ]
   * Use upstream version number
@@ -51,3 +51,25 @@ flexibee-client (2020.3.0.11) UNRELEASED; urgency=medium
   * Build 2020.3.0.5
   * Build 2020.3.0.5
   * Build 2020.3.0.11
+  [ vitex ]
+  * Build 2021.2.1
+  * debian/changelog
+
+  [ root ]
+  * Build 2021.2.1
+  * Build 2021.2.4
+  * Build 2021.3.0
+  * Build 2021.5.2
+  * Build 2021.5.3
+  * Build 2021.5.4
+  * Build 2021.5.4
+  * Build 2021.5.5
+  * Build 2021.6.0
+  * Build 2021.6.1
+  * Build 2021.6.2
+  * Build 2021.6.3
+  * Build 2021.6.3
+  * Build 2021.6.3
+  * Build 2021.6.3
+
+ -- root <root@hosting.vitexsoftware.cz>  Fri, 06 Aug 2021 00:20:10 +0200

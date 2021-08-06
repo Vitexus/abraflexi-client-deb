@@ -1,7 +1,7 @@
 #!/bin/bash
 
 PACKAGE="flexibee-client"
-LATESTURL=`curl -q https://www.flexibee.eu/podpora/stazeni-flexibee/stazeni-ekonomickeho-systemu-flexibee-linux/?client=true | grep _all.deb | awk -F'"' '{print $6}' | head -n 1`
+LATESTURL=`curl -q https://www.flexibee.eu/podpora/stazeni-flexibee/stazeni-ekonomickeho-systemu-flexibee-linux/?client=true | grep _all.deb | awk -F'"' '{print $2}' | head -n 1`
 LATESTPKG=`basename $LATESTURL`
 
 
