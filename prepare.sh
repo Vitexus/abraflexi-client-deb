@@ -17,9 +17,6 @@ cd orig
 ls -la
 ar -x ${PACKAGE}_${VERSION}_all.deb
 cd ..
-#cd debian
-#tar xzvf ../orig/control.tar.gz
-#cd ..
 mkdir data
 cd data
 tar xzvf ../orig/data.tar.gz
