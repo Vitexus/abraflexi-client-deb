@@ -134,7 +134,7 @@ def buildPackage() {
     ).trim()
 
     def VERSION = sh (
-	script: 'dpkg-parsechangelog --show-field Version',
+	script: './currentver',
         returnStdout: true
     ).trim()
 
