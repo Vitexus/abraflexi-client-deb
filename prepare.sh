@@ -4,6 +4,9 @@ PACKAGE="flexibee-client"
 
 if [ -z $VERSION ]; then
  VERSION=`./currentver`
+ CHANGES="Build ${VERSION}"
+#CHANGES=`git log -n 1 | tail -n+5`
+ dch -b -v $VERSION --package $PACKAGE $CHANGES
 fi
 
 rm -rf debian/data data
@@ -22,8 +25,4 @@ cd data
 tar xzvf ../orig/data.tar.gz
 cd ..
 
-#CHANGES=`git log -n 1 | tail -n+5`
 
-CHANGES="Build ${VERSION}"
-
-dch -b -v $VERSION --package $PACKAGE $CHANGES
