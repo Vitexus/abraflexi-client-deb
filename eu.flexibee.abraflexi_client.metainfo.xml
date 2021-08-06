@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>eu.flexibee.abraflexi_client</id>
+  
+  <name>abraflexi client</name>
+  <summary>Economic system AbraFlexi client</summary>
+  
+  <metadata_license>MIT</metadata_license>
+  <project_license>Proprietary</project_license>
+  
+  <description>
+    <p>
+      Czech economic system
+    </p>
+  </description>
+  
+  <launchable type="desktop-id">flexibee.desktop</launchable>
+  <screenshots>
+    <screenshot type="default">
+      <image>https://img.abra.eu/Vizualizace-1.jpg</image>
+    </screenshot>
+    <screenshot>
+      <image>https://www.flexibee.eu/produkty/ws7/migrace-z-ws7/porovnani-s-flexibee/001hlavniObr.png</image>
+    </screenshot>
+    <screenshot>
+      <image>https://www.flexibee.eu/produkty/ws7/migrace-z-ws7/porovnani-s-flexibee/002web.png</image>
+    </screenshot>
+  </screenshots>
+</component>
+
