@@ -1,7 +1,7 @@
 #!/bin/bash
 PACKAGE="flexibee"
 SRC="$PACKAGE-client.svg"
-DIR="debian/$PACKAGE-client/usr/share/icons/hicolor"
+DIR="icons/hicolor"
 
 resolutions='16 32 48 64 128 255 512'
 

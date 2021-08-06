@@ -3,4 +3,13 @@ client/updatejasperclasspath /usr/share/flexibee/bin
 debian/javax.annotation-api-1.3.2.jar 	usr/share/flexibee/lib/
 debian/jaxb-api-2.3.0.jar 		usr/share/flexibee/lib/
 
+icons/hicolor/scalable/flexibee.svg     usr/share/icons/hicolor/scalable/
+icons/hicolor/16x16/flexibee.png    	usr/share/icons/hicolor/16x16/
+icons/hicolor/32x32/flexibee.png  	usr/share/icons/hicolor/32x32/
+icons/hicolor/512x512/flexibee.png	usr/share/icons/hicolor/512x512/
+icons/hicolor/128x128/flexibee.png   	usr/share/icons/hicolor/128x128/
+icons/hicolor/255x255/flexibee.png  	usr/share/icons/hicolor/255x255/
+icons/hicolor/48x48/flexibee.png  	usr/share/icons/hicolor/48x48/
+icons/hicolor/64x64/flexibee.png	usr/share/icons/hicolor/64x64/
+
 
