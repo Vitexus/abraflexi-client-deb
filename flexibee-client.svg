@@ -5,6 +5,7 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="100mm"
@@ -13,7 +14,7 @@
    version="1.2"
    id="svg37"
    sodipodi:docname="flexibee-client.svg"
-   inkscape:version="0.92.4 (5da689c313, 2019-01-14)">
+   inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)">
   <metadata
      id="metadata43">
     <rdf:RDF>
@@ -28,6 +29,18 @@
   </metadata>
   <defs
      id="defs41">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient853">
+      <stop
+         style="stop-color:#faba01;stop-opacity:1;"
+         offset="0"
+         id="stop849" />
+      <stop
+         style="stop-color:#faba01;stop-opacity:0;"
+         offset="1"
+         id="stop851" />
+    </linearGradient>
     <filter
        y="-0.25"
        height="1.5"
@@ -125,6 +138,17 @@
          values="0"
          id="feColorMatrix858" />
     </filter>
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient853"
+       id="radialGradient855"
+       cx="142.04327"
+       cy="141.73972"
+       fx="142.04327"
+       fy="141.73972"
+       r="139.78962"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.5579812,0.95500645,-0.90674165,1.4792428,49.26383,-203.57999)" />
   </defs>
   <sodipodi:namedview
      pagecolor="#ffffff"
@@ -135,21 +159,21 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1920"
-     inkscape:window-height="1015"
+     inkscape:window-width="1848"
+     inkscape:window-height="1016"
      id="namedview39"
      showgrid="false"
-     inkscape:zoom="2"
-     inkscape:cx="74.04042"
-     inkscape:cy="185.47015"
-     inkscape:window-x="0"
-     inkscape:window-y="36"
+     inkscape:zoom="1"
+     inkscape:cx="-23.930234"
+     inkscape:cy="119.34503"
+     inkscape:window-x="72"
+     inkscape:window-y="27"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg37"
      units="mm"
      width="100mm" />
   <rect
-     style="fill:#faba01;fill-opacity:1;stroke:#979797;stroke-width:0.46198857;stroke-opacity:1"
+     style="fill:url(#radialGradient855);fill-opacity:1;stroke:#979797;stroke-width:0.46198857;stroke-opacity:1"
      id="rect875"
      width="279.11725"
      height="279.11725"
