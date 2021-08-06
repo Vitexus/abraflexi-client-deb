@@ -14,3 +14,4 @@ debian/files
 /debian/flexibee-client-backup/
 /debian/flexibee-client-backup.substvars
 /debian/.debhelper/
+data
