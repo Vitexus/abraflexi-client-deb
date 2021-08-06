@@ -1,4 +1,6 @@
 client/updatejasperclasspath /usr/share/flexibee/bin
 
-debian/javax.annotation-api-1.3.2.jar 	usr/share/flexibee/lib/javax.annotation-api-1.3.2.jar
-debian/jaxb-api-2.3.0.jar 		usr/share/flexibee/lib/jaxb-api-2.3.0.jar
+debian/javax.annotation-api-1.3.2.jar 	usr/share/flexibee/lib/
+debian/jaxb-api-2.3.0.jar 		usr/share/flexibee/lib/
+
+
