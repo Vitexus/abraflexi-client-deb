@@ -2,6 +2,9 @@
 
 PACKAGE="flexibee-client"
 
+if [ -z $VERSION ]; then
+ VERSION=`./currentver`
+fi
 
 rm -rf debian/data data
 
