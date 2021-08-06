@@ -6,7 +6,7 @@ if [ -z $VERSION ]; then
  VERSION=`./currentver`
  CHANGES="Build ${VERSION}"
 #CHANGES=`git log -n 1 | tail -n+5`
- dch -b -v $VERSION --package $PACKAGE $CHANGES
+# dch -b -v $VERSION --package $PACKAGE $CHANGES
 fi
 
 rm -rf debian/data data
