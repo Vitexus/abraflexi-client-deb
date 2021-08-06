@@ -1,4 +1,4 @@
-flexibee-client (2021.6.3) UNRELEASED; urgency=medium
+flexibee-client (2021.6.1) UNRELEASED; urgency=medium
 
   [ CyberVitexus ]
   * Use upstream version number
@@ -71,5 +71,8 @@ flexibee-client (2021.6.3) UNRELEASED; urgency=medium
   * Build 2021.6.3
   * Build 2021.6.3
   * Build 2021.6.3
+  * Build 2021.6.1
+  * Build 2021.6.1
+  * Build 2021.6.1
 
- -- root <root@hosting.vitexsoftware.cz>  Fri, 06 Aug 2021 00:20:10 +0200
+ -- root <info@vitexsoftware.cz>  Fri, 06 Aug 2021 13:31:03 +0200

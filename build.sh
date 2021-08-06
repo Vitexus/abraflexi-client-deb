@@ -1,7 +1,4 @@
 #!/bin/bash
-VERSION="2021.6.1"
+VERSION="2021.6.1" dpkg-buildpackage -i -us -uc -b
 
-dch -v $VERSION "Build ${VERSION}"
-
-dpkg-buildpackage -i -us -uc -b
 
