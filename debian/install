@@ -20,3 +20,5 @@ origin/usr/share/pixmaps/*                  usr/share/pixmaps/
 origin/usr/share/flexibee/* 			    usr/share/abraflexi
 origin/usr/share/flexibee/lib/ 			    usr/share/abraflexi
 origin/usr/share/fonts/truetype/* 			usr/share/fonts/truetype
+
+client/log4j.properties 			        usr/share/abraflexi/lib/    

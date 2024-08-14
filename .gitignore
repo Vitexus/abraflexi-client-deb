@@ -18,3 +18,5 @@ debian/files
 /debian/.debhelper/
 /debian/abraflexi-client/
 /origin/
+debian/abraflexi-client.postrm.debhelper
+debian/abraflexi-client.substvars
