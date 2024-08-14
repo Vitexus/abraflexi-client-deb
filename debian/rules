@@ -10,7 +10,6 @@ override_dh_prepare:
 	dh_prepare
 
 override_dh_install:
-	./fresh.sh
 	mv debian/tmp/etc/default/flexibee	debian/tmp/etc/default/abraflexi
 	mv debian/tmp/usr/share/flexibee/bin/flexibee2xml debian/tmp/usr/share/flexibee/bin/abraflexi2xml
 	mv debian/tmp/usr/share/applications/flexibee.desktop debian/tmp/usr/share/applications/abraflexi.desktop

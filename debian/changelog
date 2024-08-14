@@ -1,4 +1,4 @@
-flexibee-client (2021.1.3) UNRELEASED; urgency=medium
+flexibee-client (2024.5.3) UNRELEASED; urgency=medium
 
   [ CyberVitexus ]
   * Use upstream version number
@@ -58,4 +58,19 @@ flexibee-client (2021.1.3) UNRELEASED; urgency=medium
   * Build 2021.1.3
   * Build 2021.1.3
 
- -- root <root@exiv.jinonice.czf>  Thu, 11 Feb 2021 15:59:29 +0100
+  [ vitex ]
+  * Build 2024.5.3
+  * Build 2024.5.3
+  * Build 2024.5.3
+  * Build 2024.5.3
+  * Build 2024.5.3
+  * Build 2024.5.3
+  * Build 2024.5.3
+  * Build 2024.5.3
+  * Build 2024.5.3
+  * Build 2024.5.3
+  * Build 2024.5.3
+  * Build 2024.5.3
+  * Build 2024.5.3
+
+ -- vitex <info@vitexsoftware.cz>  Wed, 14 Aug 2024 22:11:06 +0200
