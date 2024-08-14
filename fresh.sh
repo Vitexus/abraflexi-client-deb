@@ -15,16 +15,16 @@ DOWNLOAD_URL="https://download.flexibee.eu/download/$CURRENT_FLEXIBEE_VERSION_YE
 
 echo XXXXXXXXXXXXXXXXXXXXXXXXXX Preparing $PACKAGE version $CURRENT_FLEXIBEE_VERSION
 
-mkdir -p debian/tmp
+mkdir -p origin
 
 # Find all deb files in different versions than $CURRENT_FLEXIBEE_VERSION and delete them
-find debian/tmp -name "flexibee-client_*.deb" ! -name "flexibee-client_${CURRENT_FLEXIBEE_VERSION}_all.deb" -exec rm -f {} +
+find origin -name "flexibee-client_*.deb" ! -name "flexibee-client_${CURRENT_FLEXIBEE_VERSION}_all.deb" -exec rm -f {} +
 
-if [ ! -f debian/tmp/${LATESTPKG} ]; then
-    curl $DOWNLOAD_URL -o debian/tmp/${LATESTPKG}
+if [ ! -f origin/${LATESTPKG} ]; then
+    curl $DOWNLOAD_URL -o origin/${LATESTPKG}
 fi
 
-cd debian/tmp
+cd origin
 
 ar -x ${LATESTPKG}
 tar xzf control.tar.gz
@@ -35,7 +35,6 @@ cd ..
 
 CHANGES="Build ${CURRENT_FLEXIBEE_VERSION}"
 
-cd ..
 dch -b -v $CURRENT_FLEXIBEE_VERSION --package $PACKAGE $CHANGES
 
 echo XXXXXXXXXXXXXXXXXXXXXXXXXX Ready for build - $PACKAGE version $CURRENT_FLEXIBEE_VERSION

@@ -9,14 +9,14 @@ etc/default/abraflexi
 
 usr/share/applications/abraflexi.desktop
 
-debian/tmp/usr/share/doc/flexibee/*			usr/share/doc/abraflexi/
+origin/usr/share/doc/flexibee/*			usr/share/doc/abraflexi/
 usr/share/flexibee/bin/abraflexi2xml
-debian/tmp/usr/share/mime/packages/abraflexi.xml
+origin/usr/share/mime/packages/abraflexi.xml
 
-debian/tmp/usr/share/mimelnk/application/* 		usr/share/mimelnk/application
+origin/usr/share/mimelnk/application/* 		usr/share/mimelnk/application
 
 usr/share/pixmaps/abraflexi.png
 
-debian/tmp/usr/share/flexibee/* 			usr/share/abraflexi
-debian/tmp/usr/share/flexibee/lib 			usr/share/abraflexi
-debian/tmp/usr/share/fonts/truetype/* 			usr/share/fonts/truetype
+origin/usr/share/flexibee/* 			usr/share/abraflexi
+origin/usr/share/flexibee/lib 			usr/share/abraflexi
+origin/usr/share/fonts/truetype/* 			usr/share/fonts/truetype
