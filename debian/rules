@@ -10,16 +10,16 @@ override_dh_prepare:
 	dh_prepare
 
 override_dh_install:
-	cp -f origin/etc/default/flexibee origin/etc/default/abraflexi
-	cp -f origin/usr/share/flexibee/bin/flexibee2xml origin/usr/share/flexibee/bin/abraflexi2xml
-	cp -f origin/usr/share/applications/flexibee.desktop origin/usr/share/applications/abraflexi.desktop
-	cp -f origin/usr/share/mime/packages/flexibee.xml origin/usr/share/mime/packages/abraflexi.xml
-	cp -f origin/usr/share/mimelnk/application/x-flexibee-backup.desktop origin/usr/share/mimelnk/application/x-abraflexi-backup.desktop
-	cp -f origin/usr/share/mimelnk/application/x-flexibee-connection.desktop origin/usr/share/mimelnk/application/x-abraflexi-connection.desktop
-	cp -f origin/usr/share/mimelnk/application/x-flexibee-license.desktop origin/usr/share/mimelnk/application/x-abraflexi-license.desktop
-	cp -f origin/usr/share/mimelnk/application/x-flexibee-query.desktop origin/usr/share/mimelnk/application/x-abraflexi-query.desktop
-	cp -f origin/usr/share/mimelnk/application/x-flexibee-report.desktop origin/usr/share/mimelnk/application/x-abraflexi-report.desktop
-	cp -f origin/usr/share/mimelnk/application/x-flexibee-xml.desktop origin/usr/share/mimelnk/application/x-abraflexi-xml.desktop
+	# cp -f origin/etc/default/flexibee origin/etc/default/abraflexi
+	# cp -f origin/usr/share/flexibee/bin/flexibee2xml origin/usr/share/flexibee/bin/abraflexi2xml
+	# cp -f origin/usr/share/applications/flexibee.desktop origin/usr/share/applications/abraflexi.desktop
+	# cp -f origin/usr/share/mime/packages/flexibee.xml origin/usr/share/mime/packages/abraflexi.xml
+	# cp -f origin/usr/share/mimelnk/application/x-flexibee-backup.desktop origin/usr/share/mimelnk/application/x-abraflexi-backup.desktop
+	# cp -f origin/usr/share/mimelnk/application/x-flexibee-connection.desktop origin/usr/share/mimelnk/application/x-abraflexi-connection.desktop
+	# cp -f origin/usr/share/mimelnk/application/x-flexibee-license.desktop origin/usr/share/mimelnk/application/x-abraflexi-license.desktop
+	# cp -f origin/usr/share/mimelnk/application/x-flexibee-query.desktop origin/usr/share/mimelnk/application/x-abraflexi-query.desktop
+	# cp -f origin/usr/share/mimelnk/application/x-flexibee-report.desktop origin/usr/share/mimelnk/application/x-abraflexi-report.desktop
+	# cp -f origin/usr/share/mimelnk/application/x-flexibee-xml.desktop origin/usr/share/mimelnk/application/x-abraflexi-xml.desktop
 	sed -i 's/flexibee/abraflexi/g' origin/usr/share/mimelnk/application/*
 	sed -i 's/flexibee/abraflexi/g' origin/usr/share/mime/packages/abraflexi.xml
 	cp -f origin/usr/share/pixmaps/flexibee.png	origin/usr/share/pixmaps/abraflexi.png
