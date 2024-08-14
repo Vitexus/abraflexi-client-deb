@@ -10,7 +10,6 @@ override_dh_prepare:
 	dh_prepare
 
 override_dh_install:
-	mv origin/etc/default/flexibee	origin/etc/default/abraflexi
 	mv origin/usr/share/flexibee/bin/flexibee2xml origin/usr/share/flexibee/bin/abraflexi2xml
 	mv origin/usr/share/applications/flexibee.desktop origin/usr/share/applications/abraflexi.desktop
 	mv origin/usr/share/mime/packages/flexibee.xml	origin/usr/share/mime/packages/abraflexi.xml
