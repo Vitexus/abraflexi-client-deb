@@ -8,14 +8,13 @@ Homepage: https://github.com/VitexSoftware/abraflexi-client-deb
 
 Package: abraflexi-client
 Architecture: all
-Depends: default-jdk|openjdk-11-jre|oracle-java11-jre, lsb-base, locales-all,debconf, libslf4j-java
+Depends: default-jdk|openjdk-11-jre|oracle-java11-jre|temurin-11-jre | temurin-11-jdk |, lsb-base, locales-all,debconf, libslf4j-java, xdg-utils
 Conflicts: flexibee-server,flexibee, winstrom, winstrom-client,flexibee-client
 Replaces: flexibee-server,flexibee, winstrom,flexibee-client
 Provides: abraflexi
 Recommends: dark-abraflexi-client
 Section: contrib/office
 Priority: optional
-Homepage: http://www.flexibee.eu/
+Homepage: https://www.abra.eu/flexi/
 Description: Ekonomický systém ABRA Flexi
  Klientská aplikace Internetového ekonomického systému ABRA FlexiBee.
-
