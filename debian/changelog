@@ -1,3 +1,9 @@
+abraflexi-client (2026.2.4) UNRELEASED; urgency=medium
+
+  * Build 2026.2.4
+
+ -- vitex <info@vitexsoftware.cz>  Mon, 09 Mar 2026 16:04:52 +0100
+
 abraflexi-client (2026.2.4) trixie; urgency=medium
 
   * Modernized packaging for Debian 13 (trixie) and Java 21
