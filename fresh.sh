@@ -1,6 +1,6 @@
 #!/bin/bash
 
-PACKAGE="flexibee-client"
+PACKAGE="abraflexi-client"
 
 
 LATEST_PAGE_URL="https://www.flexibee.eu/podpora/stazeni-flexibee/stazeni-ekonomickeho-systemu-flexibee-linux/"

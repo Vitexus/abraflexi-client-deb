@@ -1,3 +1,12 @@
+abraflexi-client (2026.2.4) trixie; urgency=medium
+
+  * Modernized packaging for Debian 13 (trixie) and Java 21
+  * Updated Standards-Version, Build-Depends, and Java dependencies
+  * Cleaned up control file fields and improved compatibility
+  * Build 2026.2.4
+
+ -- Vítězslav Dvořák <info@vitexsoftware.cz>  Sun, 09 Mar 2026 13:00:00 +0100
+
 flexibee-client (2024.7.4) UNRELEASED; urgency=medium
 
   * update for flexibee-client_2024.7.4

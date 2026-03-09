@@ -1,20 +1,20 @@
-Source: flexibee-client
-Build-Depends: debhelper (>= 11),po-debconf,debconf,imagemagick-6.q16, inkscape
-Standards-Version: 3.8.4
+
+Source: abraflexi-client
+Section: contrib/office
+Priority: optional
 Maintainer: Vítězslav Dvořák <info@vitexsoftware.cz>
 Uploaders: Vitex <vitex@hippy.cz>
-Priority: optional
+Build-Depends: debhelper-compat (= 13), po-debconf, debconf, imagemagick, inkscape
+Standards-Version: 4.7.0
 Homepage: https://github.com/VitexSoftware/abraflexi-client-deb
 
 Package: abraflexi-client
 Architecture: all
-Depends: default-jdk|openjdk-11-jre|oracle-java11-jre|temurin-11-jre | temurin-11-jdk |, lsb-base, locales-all,debconf, libslf4j-java, xdg-utils
-Conflicts: flexibee-server,flexibee, winstrom, winstrom-client,flexibee-client
-Replaces: flexibee-server,flexibee, winstrom,flexibee-client
+Depends: openjdk-21-jre | temurin-21-jre | temurin-21-jdk | default-jre, lsb-base, locales-all, debconf, libslf4j-java, xdg-utils
+Conflicts: flexibee-server, flexibee, winstrom, winstrom-client, flexibee-client
+Replaces: flexibee-server, flexibee, winstrom, flexibee-client
 Provides: abraflexi
 Recommends: dark-abraflexi-client
-Section: contrib/office
-Priority: optional
 Homepage: https://www.abra.eu/flexi/
 Description: Ekonomický systém ABRA Flexi
  Klientská aplikace Internetového ekonomického systému ABRA FlexiBee.

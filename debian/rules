@@ -1,35 +1,25 @@
 #!/usr/bin/make -f
 
+export DH_VERBOSE=1
+
 %:
 	dh $@
 
 override_dh_auto_clean:
 	dh_auto_clean
 
-override_dh_prepare:
-	dh_prepare
-
 override_dh_install:
-	# cp -f origin/etc/default/flexibee origin/etc/default/abraflexi
-	# cp -f origin/usr/share/flexibee/bin/flexibee2xml origin/usr/share/flexibee/bin/abraflexi2xml
-	# cp -f origin/usr/share/applications/flexibee.desktop origin/usr/share/applications/abraflexi.desktop
-	# cp -f origin/usr/share/mime/packages/flexibee.xml origin/usr/share/mime/packages/abraflexi.xml
-	# cp -f origin/usr/share/mimelnk/application/x-flexibee-backup.desktop origin/usr/share/mimelnk/application/x-abraflexi-backup.desktop
-	# cp -f origin/usr/share/mimelnk/application/x-flexibee-connection.desktop origin/usr/share/mimelnk/application/x-abraflexi-connection.desktop
-	# cp -f origin/usr/share/mimelnk/application/x-flexibee-license.desktop origin/usr/share/mimelnk/application/x-abraflexi-license.desktop
-	# cp -f origin/usr/share/mimelnk/application/x-flexibee-query.desktop origin/usr/share/mimelnk/application/x-abraflexi-query.desktop
-	# cp -f origin/usr/share/mimelnk/application/x-flexibee-report.desktop origin/usr/share/mimelnk/application/x-abraflexi-report.desktop
-	# cp -f origin/usr/share/mimelnk/application/x-flexibee-xml.desktop origin/usr/share/mimelnk/application/x-abraflexi-xml.desktop
-	sed -i 's/flexibee/abraflexi/g' origin/usr/share/mimelnk/application/*
-	sed -i 's/flexibee/abraflexi/g' origin/usr/share/mime/packages/abraflexi.xml
-	cp -f origin/usr/share/pixmaps/flexibee.png	origin/usr/share/pixmaps/abraflexi.png
+	sed -i 's/flexibee/abraflexi/g' origin/usr/share/mimelnk/application/* || true
+	sed -i 's/flexibee/abraflexi/g' origin/usr/share/mime/packages/flexibee.xml || true
+	sed -i 's/flexibee/abraflexi/g' origin/usr/share/applications/flexibee.desktop || true
+	cp -f origin/usr/share/pixmaps/flexibee.png origin/usr/share/pixmaps/abraflexi.png || true
+	cp -f origin/etc/default/flexibee origin/etc/default/abraflexi || true
 	dh_install
+	# Rename installed flexibee files to abraflexi
+	mv -f debian/abraflexi-client/etc/default/flexibee debian/abraflexi-client/etc/default/abraflexi || true
+	mv -f debian/abraflexi-client/usr/share/applications/flexibee.desktop debian/abraflexi-client/usr/share/applications/abraflexi.desktop || true
+	mv -f debian/abraflexi-client/usr/share/mime/packages/flexibee.xml debian/abraflexi-client/usr/share/mime/packages/abraflexi.xml || true
+	# Create compatibility symlink for hardcoded paths
+	ln -s abraflexi debian/abraflexi-client/usr/share/flexibee
 	./mkico.sh
-	convert -font helvetica -pointsize 30 -draw "text 300,420 '`cat debian/abraflexi-client/usr/share/abraflexi/lib/VERSION.txt`'" debian/abraflexi-client/usr/share/icons/hicolor/512x512/abraflexi.png debian/abraflexi-client/usr/share/abraflexi/abraflexi-splash.png
-
-override_dh_strip_nondeterminism:
-	echo dh_strip_nondeterminism skipped
-
-#override_dh_clean:
-#	debconf-updatepo
-#	dh_clean
+	convert -font helvetica -pointsize 30 -draw "text 300,420 '`cat debian/abraflexi-client/usr/share/abraflexi/lib/VERSION.txt`'" debian/abraflexi-client/usr/share/icons/hicolor/512x512/abraflexi.png debian/abraflexi-client/usr/share/abraflexi/abraflexi-splash.png || true

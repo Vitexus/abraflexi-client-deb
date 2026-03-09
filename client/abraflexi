@@ -32,8 +32,8 @@ findjava() {
 	# We try hard to find the proper 'java' command
 	if [ -n "${ABRAFLEXI_JAVA}" ] && [ -x "${ABRAFLEXI_JAVA}" ]
         then
-		JAVACMD="${JAVA_HOME}/bin/java"
-		_debug "Using \$JAVA_HOME to find java virtual machine."
+		JAVACMD="${ABRAFLEXI_JAVA}"
+		_debug "Using \$ABRAFLEXI_JAVA to find java virtual machine."
 	else
 		JAVACMD=$(which java)
 		if [ -n "${JAVACMD}" ] && [ -x "${JAVACMD}" ]
@@ -89,12 +89,12 @@ winstrompath="${winstrompath%/bin}" # nothing happens if winstrom is not install
 
 
 # we try different possibilities to find winstrom jars
-for jar in "${winstrompath}" "${winstrompath}/share/abraflexi" "${winstrompath}/abraflexi" "${winstrompath}/share/winstrom" "${winstrompath}/winstrom"
+for jar in "${winstrompath}/share/abraflexi" "${winstrompath}/abraflexi" "${winstrompath}/share/flexibee" "${winstrompath}" "${winstrompath}/share/winstrom" "${winstrompath}/winstrom"
 do
 	for i in ${jar}/lib/winstrom-*.jar; do
-		if [ -f $i ]; then
+		if [ -f "$i" ]; then
 			winstromdir="${jar}"
-			_debug "FlexiBee Directory is '${jar}'."
+			_debug "AbraFlexi Directory is '${jar}'."
 			break
 		fi
 	done
@@ -110,7 +110,7 @@ then
 	exit 1
 fi
 
-_debug "FlexiBee Directory is '${winstromdir}'."
+_debug "AbraFlexi Directory is '${winstromdir}'."
 
 # The CLASSPATH also lets one specify additional jars, which is good, if
 # you want to add a new Look&Feel jar (the motif one is so ugly...).
@@ -120,19 +120,35 @@ for i in ${winstromdir}/lib/classworlds*.jar; do
 	CLASSPATH="${i}:${CLASSPATH}"
 done
 
-CLASSPATH="${CLASSPATH}:/usr/share/abraflexi/lib/javax.annotation-api-1.3.2.jar:/usr/share/abraflexi/lib/jaxb-api-2.3.0.jar:/usr/share/java/slf4j-simple.jar:/usr/share/java/slf4j-api.jar"
+CLASSPATH="${CLASSPATH}:/usr/share/abraflexi/lib/javax.annotation-api-1.3.2.jar:/usr/share/abraflexi/lib/jaxb-api-2.3.0.jar"
 
 _debug "ClassPath is '$CLASSPATH'."
 
 # Go back to user's home for default directory in backups, ...
 cd $HOME
 
-# Support for server as part of client.
-# if [ x"$ABRAFLEXI_CFG" = x"local" ]; then
-#    ABRAFLEXI_SERVER_ARGS="-c /etc/abraflexi/abraflexi-server.xml $ABRAFLEXI_SERVER_ARGS"
-# fi
+VERSION=$(cat ${winstromdir}/lib/VERSION.txt 2>/dev/null)
 
-${JAVACMD} --add-opens java.base/java.util=ALL-UNNAMED --add-opens java.base/java.lang.reflect=ALL-UNNAMED --add-opens java.base/java.text=ALL-UNNAMED --add-opens java.desktop/java.awt.font=ALL-UNNAMED  \
---add-opens java.desktop/sun.awt.X11=ALL-UNNAMED  --add-opens java.base/java.lang=ALL-UNNAMED --add-exports java.xml.crypto/org.jcp.xml.dsig.internal.dom=ALL-UNNAMED  \
--Dlog4j.configuration=file:/usr/share/abraflexi/lib/log4j.properties \
--cp $CLASSPATH -Dwinstromdir=${winstromdir}/lib -splash:${winstromdir}/abraflexi-splash.png -Dclassworlds.conf=${winstromdir}/lib/launcher.txt  $ABRAFLEXI_JAVA_ARGS org.codehaus.classworlds.Launcher $ABRAFLEXI_ARGS $@
+# Debian 13 / Java 21 compatibility flags
+# We add comprehensive --add-opens to avoid reflection issues
+${JAVACMD} \
+	--add-opens java.base/java.util=ALL-UNNAMED \
+	--add-opens java.base/java.lang.reflect=ALL-UNNAMED \
+	--add-opens java.base/java.text=ALL-UNNAMED \
+	--add-opens java.base/java.lang=ALL-UNNAMED \
+	--add-opens java.base/java.io=ALL-UNNAMED \
+	--add-opens java.base/java.nio=ALL-UNNAMED \
+	--add-opens java.desktop/java.awt=ALL-UNNAMED \
+	--add-opens java.desktop/java.awt.font=ALL-UNNAMED \
+	--add-opens java.desktop/sun.awt.X11=ALL-UNNAMED \
+	--add-opens java.desktop/javax.swing=ALL-UNNAMED \
+	--add-opens java.desktop/javax.swing.plaf.basic=ALL-UNNAMED \
+	--add-exports java.xml.crypto/org.jcp.xml.dsig.internal.dom=ALL-UNNAMED \
+	-Dlog4j.configuration=file:/usr/share/abraflexi/lib/log4j.properties \
+	-cp "$CLASSPATH" \
+	-Dwinstromdir="${winstromdir}/lib" \
+	-Dflexibee.dir="${winstromdir}" \
+	-Dversion="${VERSION}" \
+	-splash:"${winstromdir}/abraflexi-splash.png" \
+	-Dclassworlds.conf="${winstromdir}/lib/launcher.txt" \
+	$ABRAFLEXI_JAVA_ARGS org.codehaus.classworlds.Launcher $ABRAFLEXI_ARGS "$@"

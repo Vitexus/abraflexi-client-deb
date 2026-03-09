@@ -20,3 +20,4 @@ debian/files
 /origin/
 debian/abraflexi-client.postrm.debhelper
 debian/abraflexi-client.substvars
+debian/abraflexi-client.debhelper.log
