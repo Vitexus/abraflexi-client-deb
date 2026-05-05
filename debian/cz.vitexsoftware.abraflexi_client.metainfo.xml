@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>cz.vitexsoftware.abraflexi_client</id>
+  <icon type="stock">abraflexi-client</icon>
+  <metadata_license>MIT</metadata_license>
+  <project_license>LicenseRef-proprietary</project_license>
+  <name>AbraFlexi Client</name>
+  <summary>Ekonomický systém ABRA Flexi — klientská aplikace</summary>
+  <description>
+    <p>
+      Client application for the ABRA FlexiBee internet accounting system. Runs on Java and provides full access to the AbraFlexi economic system.
+    </p>
+  </description>
+  <categories>
+    <category>Office</category>
+  </categories>
+  <url type="homepage">https://www.abra.eu/flexi/</url>
+  <developer id="cz.vitexsoftware">
+    <name>VitexSoftware</name>
+  </developer>
+  <content_rating type="oars-1.1"/>
+</component>
